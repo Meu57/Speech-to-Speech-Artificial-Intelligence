@@ -1,6 +1,5 @@
 Flask==2.0.2
 gunicorn
-dotenv
 openai
 simpleaudio
 numpy
