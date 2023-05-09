@@ -1,2 +1,12 @@
 Flask==2.0.2
 gunicorn
+dotenv
+datetime
+speech_processing
+openai_processing
+openai
+simpleaudio
+numpy
+azure.cognitiveservices.speech
+time
+sounds
