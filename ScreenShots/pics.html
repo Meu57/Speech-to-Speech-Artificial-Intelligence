@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pictures and Descriptions</title>
+<style>
+    /* Add spacing between text and images */
+    .container {
+      margin-bottom: 40px;
+      display: flex;
+    }
+    
+    /* Add spacing between text lines */
+    .container p {
+      margin-bottom: 10px;
+    }
+    
+    /* Add graphics to the text area */
+    .container p::after {
+      content: "🎨"; /* Add your desired graphic here */
+      margin-left: 10px;
+    }
+    
+    /* Additional styling for the text area */
+    .container p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Style the images */
+    .container img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Style the text area box */
+    .text-area {
+      border: 2px solid #ccc;
+      padding: 20px;
+    }
+    
+    /* Style the headings */
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>  
+  <div class="container">
+    <div>
+       <a href="keys.png" target="_blank">
+        <img src="keys.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+      <p>Resource Creation of Azure Cognative services and for using the keys in Application Text-To-Speech and Speech-To-Text services </p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+      <a href="env.png" target="_blank">
+        <img src="env.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+<p>The .env file contains environment variable assignments for different keys and values. In this example, it includes the following variables: COG_SERVICE_KEY, which holds the Azure key used for the cognitive services; COG_SERVICE_REGION, which specifies the resource location for the cognitive services; COG_SPEECH_LANGUAGE, which indicates the language being used for speech processing; COG_OPENAI_KEY, which stores the OpenAI key for accessing the OpenAI API; and COG_OPENAI_ENDPOINT, which represents the endpoint URL for the OpenAI API. These variables should be populated with their respective values, such as the actual Azure key, resource location, language, and OpenAI key, to enable proper functionality within the associated application or script.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+      <a href="main.png" target="_blank">
+        <img src="main.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+    <p>The main.py script is responsible for orchestrating the speech-to-text and text generation processes. It imports the necessary libraries, sets up the environment variables, creates an output folder, and initiates a loop to record speech inputs. The collected conversation history is used to construct a prompt, and the complete_openai function from openai_processing.py is invoked to generate a response. The response is printed and converted to speech, with the audio file saved in the output folder. The loop continues for a specified number of iterations, allowing for back-and-forth conversation. Overall, the script enables the integration of speech recognition, text generation, and audio output functionality using the provided libraries and environment settings.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+      <a href="openAI.png" target="_blank">
+        <img src="openAI.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+        <p>The openai_processing.py script enables the usage of the OpenAI API for text generation. It imports the necessary libraries, loads the API key from the environment variables, and defines a function called complete_openai. This function takes a prompt and an optional token parameter, and it makes a request to the OpenAI API using the specified model ("text-davinci-003"). The generated text is processed to remove empty lines and returned as the output of the function. Overall, the script provides a convenient way to utilize the OpenAI API for text generation by customizing the prompt and other parameters as needed.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+     <a href="openAI.png" target="_blank">
+        <img src="openAI.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+      <p>The speech_processing.py script handles speech processing tasks using the Azure Cognitive Services Speech SDK. It imports necessary libraries such as speech_sdk, dotenv, os, time, datetime, and simpleaudio. The script defines functions for recording speech and converting text to speech. It creates a SpeechConfig object with subscription key and region, sets up event handlers for speech recognition, and starts continuous speech recognition. It also includes functionality to play sounds and handle inactivity. Additionally, the script provides a function to synthesize speech from text using the SpeechSynthesizer and AudioOutputConfig objects. Overall, the script enables speech processing functionalities using the Azure Cognitive Services Speech SDK.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+     <a href="sound.png" target="_blank">
+        <img src="sound.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+     <p>The sounds.py script focuses on playing a sound using the simpleaudio and numpy libraries. It includes a function called play_sound() that generates a waveform of a specified frequency and duration using a sine wave function. The waveform is created as a numpy array of samples, and its amplitude is adjusted to control the loudness of the sound. The waveform is then converted to 16-bit integers and used to create a simpleaudio object. The sa.play_buffer() function is used to play the waveform as an audio stream. The function blocks until the sound finishes playing. Overall, this script provides a way to play custom sounds for various applications, such as indicating the start or end of a recording session.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+      <a href="resourcefunction.png" target="_blank">
+        <img src="resourcefunction.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+       <p>Creation Function app for deployemnt the application</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div>
+      <a href="app.png" target="_blank">
+        <img src="app.png" alt="Picture 1">
+      </a>
+    </div>
+    <div class="text-area">
+      <p>app.py sets up a basic Flask application. It imports the necessary libraries, including os and Flask, and creates an instance of the Flask application named app. It defines a single route at the root URL ("/") with the @app.route decorator. When a request is made to the root URL, it prints a message and renders the "index.html" template. Finally, it starts the Flask application if the script is executed directly.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
