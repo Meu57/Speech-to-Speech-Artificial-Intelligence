@@ -65,6 +65,6 @@ jobs:
           app-name: 'ameenfunctionapp'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E8B04C0A7B624399BD370CBF8D8679D5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8E91D4F913E347738F7255EFD31D7AB1 }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
