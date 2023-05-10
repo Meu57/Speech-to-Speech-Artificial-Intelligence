@@ -1,5 +1,1 @@
-Flask==2.0.2
-gunicorn
-openai
-numpy
-azure.cognitiveservices.speech
+
